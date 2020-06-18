@@ -1,0 +1,164 @@
+<html>
+
+<title>Grid Layout</title>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+  <div class="grid-container">
+    <header class="header">
+      <div class="header__logo"></div>
+      <div class="header__title text-light">Responsive <strong>Grid Layout</strong></div>
+    </header>
+    <main class="main">
+      <div class="main-overview">
+        <div class="overviewcard">
+          <h3 class="overviewCard-title text-light"> <strong>Responsive Web Design</strong></h3>
+          <div class="overviewcard__info"><br>Responsive Web design is the approach that suggests that design and
+            development should respond to the user’s behavior and environment based on screen size, platform and
+            orientation.
+            <br>
+            As the user switches from their laptop to iPad, the website should automatically switch to
+            accommodate for resolution, image size and scripting abilities. </div>
+        </div>
+        <div class="overviewcard">
+          <h3 class="overviewCard-title text-light"> <strong>RWD Media Queries</strong></h3>
+          <div class="overviewcard__info"><br>Media query is a CSS technique introduced in CSS3.
+            The @media rule is used in media queries to apply different styles for different media types/devices.
+            <br>Media queries can also be used to change layout of a page depending on the orientation of the browser.
+
+          </div>
+        </div>
+        <div class="overviewcard">
+          <h3 class="overviewCard-title text-light"> <strong>Fluid Layout</strong></h3>
+          <div class="overviewcard__info"><br>A fluid layout is a type of webpage design in which layout of the page
+            resizes as the window size is changed. This is accomplished by defining areas of the page using percentages
+            instead of fixed pixel widths.<br>The CSS used to create a fixed layout vs a fluid layout is shown below.
+            Fluid layouts solve this problem by using percentages to define each area of the layout.
+          </div>
+        </div>
+        <div class="overviewcard">
+          <h3 class="overviewCard-title text-light"> <strong>FlexBox</strong></h3>
+          <div class="overviewcard__info"><br>The Flex Box was designed as a
+            one-dimensional layout model, and as a method that could offer space distribution between items in an
+            interface and powerful alignment capabilities.Support includes all properties prefixed with flex, as well as
+            display: flex, display: inline-flex,
+            align-content, align-items, align-self, justify-content and order. </div>
+        </div>
+      </div>
+      <div class="main-cards">
+        <div class="card">
+          <div class="card__header">
+            <div class="card__header-title text-light"> <strong>Calculator</strong>
+            </div>
+          </div>
+          <div class="calculator" onsubmit="javascript:cal(document.getElementById('valueshow').value);return false;">
+            <!-- <div id="result" class="input1">0</div> -->
+            <input type="text" id="valueshow" value="0">
+            <div class="calculator-buttons">
+              <button class=" calc-button is-operator" onclick="cals(this.value);" value="←">&larr;</button>
+              <button class="calc-button is-clear" onclick="cals(this.value);" value="C">C</button>
+              <button class="calc-button is-dot" onclick="cals(this.value);" value=".">.</button>
+              <button class="calc-button is-divide" onclick="cals(this.value);" value="/">/</button>
+
+              <button class="calc-button" onclick="cals(this.value);" value="7">7</button>
+              <button class="calc-button" onclick="cals(this.value);" value="8">8</button>
+              <button class="calc-button" onclick="cals(this.value);" value="9">9</button>
+              <button class="calc-button times" onclick="cals(this.value);" value="*">*</button>
+
+              <button class="calc-button" onclick="cals(this.value);" value="4">4</button>
+              <button class="calc-button" onclick="cals(this.value);" value="5">5</button>
+              <button class="calc-button" onclick="cals(this.value);" value="6">6</button>
+              <button class="calc-button minus" onclick="cals(this.value);" value="-">-</button>
+
+              <button class="calc-button" onclick="cals(this.value);" value="1">1</button>
+              <button class="calc-button" onclick="cals(this.value);" value="2">2</button>
+              <button class="calc-button" onclick="cals(this.value);" value="3">3</button>
+              <button class="calc-button plus" onclick="cals(this.value);" value="+">+</button>
+
+              <button class="calc-button is-zero" onclick="cals(this.value);" value="0">0</button>
+              <button class="calc-button is-equals " onclick="cal(document.getElementById('valueshow').value);"
+                value="=">=</button>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__header-title text-light"><strong>Basic Concepts of Grid Layout </strong>
+            </div>
+          </div>
+          <div class="card__main">
+            <div class="card__row">
+              <div class="card__icon"></div>
+              <div class="card__time">
+                <div class="card_point text-bold">CSS Grid Layout</div>
+              </div>
+              <div class="card__detail">
+                <div class="card__note">CSS Grid Layout Module offers a grid-based layout system, with rows and columns,
+                  making it easier to design web pages without having to use floats and positioning.</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__icon"></div>
+              <div class="card__time">
+                <div class="card_point">Grid Container
+                </div>
+              </div>
+              <div class="card__detail">
+                <div class="card__note">We create a grid container by declaring display: grid or display: inline-grid on
+                  an element.</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__icon"></div>
+              <div class="card__time">
+                <div class="card_point">Grid Tracks</div>
+              </div>
+              <div class="card__detail">
+                <div class="card__note">We define rows and columns on our grid with the grid-template-columns and
+                  grid-template-rows properties.A grid track is the space between any two
+                  lines on the grid. </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__icon"></div>
+              <div class="card__time">
+                <div class="card_point">The fr Unit</div>
+              </div>
+              <div class="card__detail">
+                <div class="card__note">Grid also introduces an additional length unit to help us create flexible grid
+                  tracks.The new fr unit represents a fraction of the available space in the grid container.</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__icon"></div>
+              <div class="card__time">
+                <div class="card_point">Grid Areas</div>
+              </div>
+              <div class="card__detail">
+                <div class="card__note">Items can span one or more cells both by row or by column, and this creates a
+                  grid area. </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__copyright">&copy; Responsive Grid Layout</div>
+      <div class="footer__signature">A00268744</div>
+    </footer>
+  </div>
+
+
+</body>
+
+</html>
